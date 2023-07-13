@@ -44,9 +44,9 @@ cognitoUserPoolDoamin:
     Domain: engailtonoliveira-${self:provider.stage}
 
 # Application parameters
-userPoolIdParam:
+userPoolArnParam:
   Type: AWS::SSM::Parameter
   Properties:
-    Name: /notes/${self:provider.stage}/userPoolId
+    Name: /notes/${self:provider.stage}/userPoolArn
     Type: String
     Value: !GetAtt cognitoUserPool.Arn
